@@ -66,7 +66,7 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
-The p-value of chi-squared test is 0.02022, which is less than 0.05.The p-value of the fisher exact test is 0.01651, which is less than 0.05 So we reject the null hypothesis- there is a relationship between gun ownership and being in favor with the death penalty. Gun owners are 2.3 times more likely to favor capital punishment than those who do not own a gun.
+The p-value of chi-squared test is 0.02022, which is less than 0.05.The p-value of the fisher exact test is 0.01651, which is less than 0.05 Therefor we reject the null hypothesis- there is a relationship between gun ownership and being in favor of the death penalty. Gun owners are 2.3 times more likely to favor capital punishment than those who do not own a gun.
 
 #  Question 2
 
@@ -78,7 +78,7 @@ $H_A$: There is no difference between years of education and those who did or di
 
 ## Methods
 
-Years of education is a numerical variable, people who voted  is a categorical variable. Therfor we will use the numerical-cat helper file.
+Years of education is a numerical variable, people who voted  is a categorical variable. Therefor we will use the numerical-cat helper file.
 
 ## Results
 
@@ -116,7 +116,7 @@ $H_A$ There is a significant difference in average score on the WORDSUM test bet
 
 ## Methods
 
-The average score on a wordsum test is a numerical variable, and the level of education is a categorical variable. Therefor we use the numerical~cat helper file is the helper file. 
+The average score on a wordsum test is a numerical variable, and the level of education is a categorical variable. Therefor we use the numerical-cat helper file. 
 
 ## Results
 
@@ -131,7 +131,7 @@ ggplot(data=GSSdata, aes(x = DEGREE, y = WORDSUM)) +
   ggtitle("Boxplot of Response Variable by Category")
 ```
 
-The boxplot indicates that the WORSUM scores of the people with higher education like a Bachelor's, graduate, and junior college degrees are higher.
+The boxplot indicates that the wordsum scores of the people with higher education like a Bachelor's, graduate, and junior college degrees are higher than those with a lesser education.
 
 ## Numerical Descriptive Results
 
@@ -139,7 +139,7 @@ The boxplot indicates that the WORSUM scores of the people with higher education
 favstats(WORDSUM~DEGREE,data=GSSdata)
 ```
 
-The table indicates that for those who earned a graduate, bachelors, or junior college level of education degree scored higher on the WORDSUM test (9-10). Those who earned a high school or LT high school degree scored lower (7-8).
+The table indicates that for those who earned a graduate, bachelors, or junior college level of education degree scored higher on the wordsum test (9-10). Those who earned a high school or LT high school degree scored lower (7-8).
 
 ## Inferential Results
 
@@ -148,9 +148,9 @@ model1 <- aov(WORDSUM~DEGREE,data=GSSdata)
 summary.aov(model1)
 ```
 
-The p-value is 0.00000025 which is lower than 0.05. therefor we reject the null hypothesis- there is a difference in average score of WORDSUM test and level of education earned. We can conclude that the higher the education level, the higher the wordsum score.
+The p-value is 0.00000025 which is lower than 0.05, therefor we reject the null hypothesis- there is a difference in average score of WORDSUM test and level of education earned. We can conclude that the higher the education level, the higher the wordsum score.
 
 # Discussion and Conclusion
 
-In question 1 we used a cat-cat helper file to prove there is a correlation between gun owners and those that favor the death penalty. For question 2 we used a numerical-cat helper file to verify that there is a difference between the years of education a person received and whether or not they voted. For question 3, we used a numerical-cat helper file to reject the null hypothesis - there is a direct correlation between having a degree and the worsum score - the higher the education, the higher the word score.
+In question 1 we used a categorical-categorical helper file to prove there is a correlation between gun owners and those that favor the death penalty. For question 2 we used a numerical-categorical helper file to verify that there is a difference between the years of education a person received and whether or not they voted. For question 3, we used a numerical-categorical helper file to reject the null hypothesis - there is a direct correlation between having a degree and the wordsum score - the higher the education, the higher the word score.
 
