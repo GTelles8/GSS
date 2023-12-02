@@ -111,32 +111,47 @@ The t-test p-value here would be 0.0000001248, which would be less than 0.05. As
 
 #  Question 3
 
-<!--In this section you explain what you are trying to show.  Where did the data come from?  What is the research or other question you are trying to answer?!-->
-
 Determine if a persons performance on the wordsum test (WORDSUM) is independent of their level of schooling (DEGREE).
+
+$H_0$ There is no difference between the average score on the WORDSUM test and level of schooling DEGREE  
+
+$H_A$ There is a significant difference in average score on the WORDSUM test between at least two levels of DEGREE
 
 ## Methods
 
-<!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
+The response variable would be WORDSUM, and it would be a numerical variable. The predictor variable would be DEGREE, and it is a categorical variable.Numerical~cat file is the helper file we would use for this. 
 
-##Results
+## Results
 
-<!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
+## Graphical Descriptive Results
 
-### Descriptive Results
+```{r}
+# Create a box plot
+ggplot(data=GSSdata, aes(x = DEGREE, y = WORDSUM)) +
+  geom_boxplot() +
+  xlab("Category") +
+  ylab("WORDSUM") +
+  ggtitle("Boxplot of Response Variable by Category")
+```
 
-#### Graphical Descriptive Results
+The graph above shows us that the WORSUM scores of the people with the following levels of education: a Bachelor's degree, graduate, high school, and junior college dregree, and less than high school.
 
-<!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+## Numerical Descriptive Results
 
-#### Numerical Descriptive Results
+```{r}
+favstats(WORDSUM~DEGREE,data=GSSdata)
+```
 
-<!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+The data set shows us the median and mean scores of the WORDSUM test based on the level of education of a person has earned. From this data we can see that those who earned a graduate,bachelors, or junior college level of education degree scored higher on the WORDSUM test, they scored around 9-10.Those who earned a high school degree and LT high school degree ended up scoring lower on the WORDSUM test,scoring around 7-8.
 
-### Inferential Results
+## Inferential Results
 
-<!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
+```{r}
+model1 <- aov(WORDSUM~DEGREE,data=GSSdata)
+summary.aov(model1)
+```
 
+The p-value is 0.00000025. Since it is lower than 0.05, reject the null hypothesis, which was that there was no difference in average score of WORDSUM test and level of education earned. This means that we can conclude that there is a significant difference in average score on the WORDSUM test between at least two levels of DEGREE.
 
 # Discussion and Conclusion
 
