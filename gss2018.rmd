@@ -34,7 +34,7 @@ $H_A$: There is a relationship between gun ownership and opinion on the death pe
 
 ## Methods
 
-Both of the variables are categorical, so we would use the Cat~Cat file.
+The death penalty is a categorical variable, and gun ownership is a categorical variable, therfor we use the cat-cat helper file.
 
 ## Results
 
@@ -45,7 +45,7 @@ barchartGC(~OWNGUN + CAPPUN,data=GSSdata)
 barchartGC(~OWNGUN + CAPPUN,data=GSSdata, type="percent")
 ```
 
-The graph shows that the people who own a gun are most likely to favor the death penalty.The people who do not own a gun are less likely to favor the death penalty.
+The bar graph indicates that gun owners are more likely than non-gun owners to favor the death penalty.
 
 ## Numerical Descriptive Results
 
@@ -55,7 +55,7 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
-The summary shows us that the people who own a gun are more likely to be on favor of the death penalty and the people who don't own a gun are less likely to favor the death penalty.
+The table indicates that 76% of gun owners are in favor of the death penalty, as opposed to the non-gun owners who only favor the death penalty by 58%.
 
 
 ## Inferential Results
@@ -66,9 +66,7 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
-The p-value of chi-squared test is 0.02022, which is less than 0.05.So we would reject the null hypothesis.
-
-The p-value of the fisher exact test is 0.01651, which is less than 0.05.We reject the null hypothesis. We can conclude that there is a relationship between gun relationship and opinion in capitol punishment. People who own a gun are 2.3 times more likely to favor capitol punishment than those who do not own a gun.
+The p-value of chi-squared test is 0.02022, which is less than 0.05.The p-value of the fisher exact test is 0.01651, which is less than 0.05 So we reject the null hypothesis- there is a relationship between gun ownership and being in favor with the death penalty. Gun owners are 2.3 times more likely to favor capital punishment than those who do not own a gun.
 
 #  Question 2
 
@@ -155,5 +153,5 @@ The p-value is 0.00000025. Since it is lower than 0.05, reject the null hypothes
 
 # Discussion and Conclusion
 
-<!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+
 
