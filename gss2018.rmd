@@ -78,10 +78,9 @@ $H_A$: There is no difference between years of education and those who did or di
 
 ## Methods
 
-The response variable would be EDUC,and it is numerical variable. The predictor variable would be VOTE12, and it is a categorical variable.We would use the numerical~cat helper file.
+Years of education is a numerical variable, people who voted  is a categorical variable. Therfor we will use the numerical-cat helper file.
 
 ## Results
-
 
 ## Graphical Descriptive Results
 
@@ -89,7 +88,7 @@ The response variable would be EDUC,and it is numerical variable. The predictor 
 plot(EDUC~VOTE12,data=GSSdata)
 ```
 
-The plot shows us that the people who voted in 2012 have a higher level of years of education, and the people that didn't vote in 2012 have a lower level of years of education.
+The plot indicates that the people who voted in 2012 have a higher level of years of education, as opposed to those who did not vote.
 
 ## Numerical Descriptive Results
 
@@ -97,7 +96,7 @@ The plot shows us that the people who voted in 2012 have a higher level of years
 favstats(EDUC~VOTE12,data=GSSdata)
 ```
 
-The table shows that the people who voted in 2012 have a higher level of years of education, and the people that didn't vote in 2012 have a lower level of years of education. The mean of level of years of education for the people who voted was about 15 and the mean for those who didn't vote was about 13.
+The table indicates that the median for  people who voted in 2012 is 16, and the median for the people that didn't vote in 2012 was 13. This corroborates the previous plot that the majority of voters were educated.
 
 ## Inferential Results
 
@@ -105,7 +104,7 @@ The table shows that the people who voted in 2012 have a higher level of years o
 t.test(EDUC~VOTE12,data=GSSdata)
 ```
 
-The t-test p-value here would be 0.0000001248, which would be less than 0.05. As a result, we would then we reject the null hypothesis, which was that there is no difference between years of education and those who did or did not vote in 2012. We conclude that there is a difference between years of education and those who did or did not vote in 2012
+The t-test p-value is 0.0000001248, which is less than 0.05. Therefor we reject the null hypothesis- there is a difference between years of education and those who did or did not vote in 2012. 
 
 #  Question 3
 
