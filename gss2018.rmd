@@ -152,5 +152,5 @@ The p-value is 0.00000025 which is lower than 0.05. therefor we reject the null 
 
 # Discussion and Conclusion
 
-
+In question 1 we used a cat-cat helper file to prove there is a correlation between gun owners and those that favor the death penalty. For question 2 we used a numerical-cat helper file to verify that there is a difference between the years of education a person received and whether or not they voted. For question 3, we used a numerical-cat helper file to reject the null hypothesis - there is a direct correlation between having a degree and the worsum score - the higher the education, the higher the word score.
 
